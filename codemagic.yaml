@@ -1,3 +1,11 @@
-scripts:
-  - name: Build for iOS # Name of the section
-    script: flutter build ios # The script(s) to be run in that section
+workflows:
+  my-workflow: # workflow ID
+    name: My workflow name # workflow name displayed in Codemagic UI
+    instance_type: mac_mini_m1 # machine instance type
+    max_build_duration: 60 # build duration in minutes (min 1, max 120)
+    environment:
+    cache:
+    triggering:
+    scripts:
+    artifacts:
+    publishing:
